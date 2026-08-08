@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savaro - Taste More Feel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="nav-left">
+            <a href="#reservation" class="nav-reservation">RESERVATION</a>
+        </div>
+        <div class="nav-center">
+            <img src="assets/Logo.svg" alt="Savaro Logo" class="brand-logo">
+        </div>
+        <div class="nav-right">
+            <button class="menu-btn" id="menuToggle" aria-label="Toggle navigation">
+                <span>MENU</span>
+                <div class="hamburger-icon">
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Side Navigation Drawer -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-wrapper" id="menuDrawer">
+        <nav class="drawer-nav">
+            <ul class="drawer-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#events">OUR EVENTS</a></li>
+                <li><a href="#blogs">BLOGS</a></li>
+                <li><a href="#menu">OUR MENU</a></li>
+            </ul>
+        </nav>
+        <div class="drawer-divider"></div>
+        <div class="drawer-footer">
+            <a href="#contact" class="drawer-footer-link">CONTACT</a>
+            <a href="#privacy" class="drawer-footer-link">PRIVACY</a>
+            <a href="#faq" class="drawer-footer-link">FAQ</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+
+        <!-- Full Viewport Background Image -->
+        <div class="hero-bg-wrapper">
+            <img src="assets/hero-img.png" alt="Savaro Restaurant Atmosphere" class="hero-image">
+        </div>
+
+        <!-- Main Hero Content Container -->
+        <div class="hero-content">
+            
+            <!-- Script Subtitle Block with top-left decorative lines -->
+            <div class="subtitle-container">
+                <img src="assets/lines.svg" alt="" class="decorative-lines">
+                <span class="script-text">savaro presents</span>
+            </div>
+
+            <!-- Main Title Banner in Clash Display -->
+            <h1 class="hero-title">
+                <span class="title-line">TASTE</span>
+                <span class="title-line">MORE FEEL</span>
+                <span class="title-line">SAVARO</span>
+            </h1>
+
+            <!-- Bottom Row: Description + Split Red/White Button -->
+            <div class="hero-bottom-row">
+                <div class="hero-description">
+                    Modern dining with unforgettable <br>flavors and inspired recipes.
+                </div>
+
+                <div class="hero-cta-wrapper">
+                    <a href="#about" class="hero-btn">
+                        <div class="btn-text-wrapper">
+                            <span class="btn-text">Learn More</span>
+                        </div>
+                        <div class="btn-icon-wrapper">
+                            <svg class="btn-arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="about">
+        <div class="about-container">
+            
+            <!-- Section Subtitle in Telma Script -->
+            <div class="about-badge">
+                <span class="about-subtitle">about us</span>
+            </div>
+
+            <!-- Big Inline Text Heading with Pizza Images embedded -->
+            <h2 class="about-heading">
+                AT SAVARO, WE BELIEVE GREAT 
+                <span class="inline-img-badge"><img src="assets/pizza-inline-1.png" alt="Wood-fired pizza"></span>
+                FOOD IS MORE THAN A MEAL 
+                <span class="inline-img-badge"><img src="assets/pizza-inline-2.png" alt="Fresh Neapolitan pizza"></span>
+                IT'S AN EXPERIENCE 
+                <span class="inline-img-badge"><img src="assets/pizza-inline-3.png" alt="Artisanal pizza topping"></span>
+                MEANT TO BE 
+                <span class="inline-img-badge"><img src="assets/pizza-inline-4.png" alt="Pizza ingredients"></span>
+                SAVORED.
+            </h2>
+
+            <!-- Button Wrapper -->
+            <div class="about-cta-wrapper">
+                <a href="#menu" class="hero-btn">
+                    <div class="btn-text-wrapper">
+                        <span class="btn-text">Learn More</span>
+                    </div>
+                    <div class="btn-icon-wrapper">
+                        <svg class="btn-arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const menuClose = document.getElementById('menuClose');
+        const menuDrawer = document.getElementById('menuDrawer');
+        const menuOverlay = document.getElementById('menuOverlay');
+
+        function toggleMenu() {
+            const isOpen = menuDrawer.classList.contains('active');
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        }
+
+        function openMenu() {
+            menuToggle.classList.add('active');
+            menuDrawer.classList.add('active');
+            menuOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMenu() {
+            menuToggle.classList.remove('active');
+            menuDrawer.classList.remove('active');
+            menuOverlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        if (menuClose) menuClose.addEventListener('click', closeMenu);
+        menuOverlay.addEventListener('click', closeMenu);
+    </script>
+</body>
+</html>
