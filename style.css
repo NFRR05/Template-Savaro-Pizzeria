@@ -1087,7 +1087,6 @@ body {
     position: absolute;
     width: 44px;
     height: auto;
-    filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(6935%) hue-rotate(358deg) brightness(100%) contrast(102%);
     pointer-events: none;
 }
 
