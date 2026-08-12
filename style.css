@@ -404,11 +404,12 @@ body {
     margin: 0;
 }
 
+.brand-lines-icon,
 .section-title-lines {
     position: absolute;
     width: 44px;
     height: auto;
-    left: -32px;
+    left: -44px;
     top: -12px;
     filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(6935%) hue-rotate(358deg) brightness(100%) contrast(102%);
     pointer-events: none;
@@ -655,7 +656,7 @@ body {
     .section-title-lines {
         width: 26px !important;
         top: -6px !important;
-        left: -18px !important;
+        left: -30px !important;
     }
 
     /* Position SVG lines icon right next to 'W' in Testimonials section title on mobile */
