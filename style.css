@@ -659,12 +659,7 @@ body {
         left: -30px !important;
     }
 
-    /* Position SVG lines icon right next to 'W' in Testimonials section title on mobile */
-    .testimonials-section .brand-lines-icon {
-        top: -10px !important;
-        left: 2px !important;
-        width: 22px !important;
-    }
+    /* Position SVG lines icon uniformly across mobile titles */
 
     /* FORCED 100% Full Width Mobile CTA Buttons */
     .hero-btn,
