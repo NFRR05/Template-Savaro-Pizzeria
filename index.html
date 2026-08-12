@@ -205,7 +205,7 @@
                 <span class="section-subtitle-script animate-blur">our menu</span>
                 <h2 class="section-title-red animate-blur">
                     <span style="position: relative; display: inline-block;">
-                        <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                        <img src="assets/lines-red.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
                         CRAFTED WITH
                     </span><br>FLAVOR
                 </h2>
@@ -252,7 +252,7 @@
             <span class="section-subtitle-script animate-blur">our chef</span>
             <h2 class="section-title-red animate-blur">
                 <span style="position: relative; display: inline-block;">
-                    <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                    <img src="assets/lines-red.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
                     About the
                 </span> <br class="mobile-chef-break">Chef
             </h2>
@@ -474,7 +474,7 @@
                 <span class="section-subtitle-script animate-blur">faq</span>
                 <h2 class="section-title-red animate-blur">
                     <span style="position: relative; display: inline-block;">
-                        <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                        <img src="assets/lines-red.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
                         FREQUENTLY ASKED
                     </span><br>QUESTIONS
                 </h2>
@@ -788,7 +788,7 @@
             <span class="section-subtitle-script animate-blur">find our pizzeria</span>
             <h2 class="section-title-red animate-blur">
                 <span style="position: relative; display: inline-block;">
-                    <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                    <img src="assets/lines-red.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
                     STORE LOCATION
                 </span><br>&amp; HOURS
             </h2>
@@ -1203,8 +1203,9 @@
                         } else {
                             const span = document.createElement('span');
                             span.style.display = 'inline-block';
-                            span.style.paddingRight = '0.08em';
-                            span.style.marginRight = '0.02em';
+                            // Add padding to expand bounding box for blur filter, preventing clipping artifacts on iOS/Safari
+                            span.style.padding = '0.15em 0.08em 0.15em 0.1em';
+                            span.style.margin = '-0.15em 0.02em -0.15em -0.1em';
                             span.className = 'dynamic-blur';
                             span.textContent = word;
                             fragment.appendChild(span);
