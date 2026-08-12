@@ -660,7 +660,7 @@ body {
 
     /* Position SVG lines icon uniformly across mobile titles */
     .testimonials-section .brand-lines-icon {
-        left: -20px !important;
+        left: 10px !important;
     }
 
     /* FORCED 100% Full Width Mobile CTA Buttons */
