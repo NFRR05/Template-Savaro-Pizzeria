@@ -590,7 +590,7 @@
                     <span style="position: relative; display: inline-block;">
                         <img src="assets/lines.svg" alt="" class="brand-lines-icon">
                         WHAT THEY'RE SAYING
-                    </span><br>ABOUT OUR SERVICE
+                    </span>
                 </h2>
             </div>
             
@@ -1218,7 +1218,8 @@
                     seg.style.opacity = '0';
                     seg.style.filter = 'blur(12px)';
                     const startY = direction === 'top' ? '-40px' : '40px';
-                    seg.style.transform = `translateY(${startY})`;
+                    const isBadge = seg.classList.contains('inline-img-badge');
+                    seg.style.transform = isBadge ? `translateY(${startY}) scale(0.6)` : `translateY(${startY})`;
                     seg.style.transition = `opacity ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1), filter ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1), transform ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1)`;
                     seg.style.transitionDelay = `${(idx * delay) / 1000}s`;
                 });
@@ -1232,7 +1233,8 @@
                         allSegments.forEach(seg => {
                             seg.style.opacity = '1';
                             seg.style.filter = 'blur(0px)';
-                            seg.style.transform = 'translateY(0px)';
+                            const isBadge = seg.classList.contains('inline-img-badge');
+                            seg.style.transform = isBadge ? 'translateY(-6px) scale(1)' : 'translateY(0px)';
                         });
                     }
                 };
