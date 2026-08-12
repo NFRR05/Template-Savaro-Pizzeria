@@ -1216,11 +1216,19 @@
                     play() {
                         if (isPlayed) return;
                         isPlayed = true;
-                        allSegments.forEach(seg => {
+                        allSegments.forEach((seg, idx) => {
                             seg.style.opacity = '1';
                             seg.style.filter = 'blur(0px)';
                             const isBadge = seg.classList.contains('inline-img-badge');
                             seg.style.transform = isBadge ? 'translateY(-6px) scale(1)' : 'translateY(0px)';
+                            
+                            // Clean up inline styles after transition to restore CSS hover effects on desktop
+                            setTimeout(() => {
+                                seg.style.transition = '';
+                                seg.style.transform = '';
+                                seg.style.filter = '';
+                                seg.style.willChange = '';
+                            }, (idx * delay) + (stepDuration * 1000) + 50);
                         });
                     }
                 };

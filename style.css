@@ -659,6 +659,9 @@ body {
     }
 
     /* Position SVG lines icon uniformly across mobile titles */
+    .testimonials-section .brand-lines-icon {
+        left: -20px !important;
+    }
 
     /* FORCED 100% Full Width Mobile CTA Buttons */
     .hero-btn,
@@ -973,7 +976,6 @@ body {
     width: 104px;
     height: 52px;
     border-radius: 0px;
-    overflow: hidden;
     margin: 0 10px;
     transform: translateY(-6px) translateZ(0);
     backface-visibility: hidden;
