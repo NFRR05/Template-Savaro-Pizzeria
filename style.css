@@ -668,7 +668,8 @@ body {
     .booking-submit-btn,
     .form-submit-row,
     .hero-cta-wrapper,
-    .about-cta-wrapper {
+    .about-cta-wrapper,
+    .menu-cta-wrapper {
         width: 100% !important;
         max-width: 100% !important;
         display: flex !important;
@@ -1060,6 +1061,13 @@ body {
         display: flex !important;
         justify-content: center !important;
     }
+}
+
+.menu-cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+    width: 100%;
 }
 
 /* Menu Section */
