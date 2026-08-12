@@ -847,7 +847,7 @@ body {
         gap: 28px !important;
         padding: 0 !important;
         margin: 0 !important;
-        align-items: stretch !important;
+        align-items: flex-start !important;
     }
 
     .booking-image-box {
