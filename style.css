@@ -157,8 +157,8 @@ body {
     filter: brightness(0) invert(1);
 }
 
-/* MENU Button in Header */
-.menu-btn {
+/* Navigation Drawer Toggle Button in Header */
+.drawer-toggle-btn {
     position: relative;
     z-index: 1020;
     background: transparent;
@@ -175,11 +175,11 @@ body {
     transition: color 0.4s ease;
 }
 
-.menu-btn.active {
+.drawer-toggle-btn.active {
     color: var(--color-brand-red) !important;
 }
 
-.menu-btn.active span {
+.drawer-toggle-btn.active span {
     color: var(--color-brand-red) !important;
 }
 
@@ -210,22 +210,22 @@ body {
 }
 
 /* Active State: Red X */
-.menu-btn.active .hamburger-icon span {
+.drawer-toggle-btn.active .hamburger-icon span {
     background-color: var(--color-brand-red) !important;
 }
 
-.menu-btn.active .hamburger-icon span:nth-child(1) {
+.drawer-toggle-btn.active .hamburger-icon span:nth-child(1) {
     top: 8px;
     transform: rotate(45deg);
 }
 
-.menu-btn.active .hamburger-icon span:nth-child(2) {
+.drawer-toggle-btn.active .hamburger-icon span:nth-child(2) {
     top: 8px;
     transform: rotate(-45deg);
 }
 
 /* Side Navigation Drawer */
-.menu-overlay {
+.drawer-overlay {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.6);
@@ -236,12 +236,12 @@ body {
     z-index: 1000;
 }
 
-.menu-overlay.active {
+.drawer-overlay.active {
     opacity: 1;
     visibility: visible;
 }
 
-.menu-wrapper {
+.drawer-wrapper {
     position: fixed;
     top: 0;
     right: -520px;
@@ -257,7 +257,7 @@ body {
     transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.menu-wrapper.active {
+.drawer-wrapper.active {
     right: 0;
 }
 
@@ -622,7 +622,7 @@ body {
         text-align: center;
     }
 
-    .menu-wrapper {
+    .drawer-wrapper {
         width: 100%;
         max-width: 100%;
     }
@@ -749,7 +749,19 @@ body {
         overflow: visible !important;
     }
 
-    .Ul.team-carousel-track {
+    .team-carousel-wrapper {
+        height: auto !important;
+        overflow: visible !important;
+    }
+
+    /* Remove side-fade mask on mobile */
+    .team-carousel-mask {
+        overflow: visible !important;
+        -webkit-mask-image: none !important;
+        mask-image: none !important;
+    }
+
+    .team-carousel-track {
         display: flex !important;
         flex-direction: column !important;
         animation: none !important;
@@ -757,35 +769,42 @@ body {
         width: 100% !important;
         height: auto !important;
         gap: 36px !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
     }
 
     /* Hide duplicate carousel items on mobile */
-    .Ul.team-carousel-track > .Li:nth-child(n+6) {
+    .team-carousel-track > .team-card[aria-hidden="true"] {
         display: none !important;
     }
 
-    .Ul.team-carousel-track > .Li {
+    .team-card {
         width: 100% !important;
         max-width: 100% !important;
         height: auto !important;
+        box-sizing: border-box !important;
     }
 
-    .Ul.team-carousel-track .DivFramerW3kvrkContainer,
-    .Ul.team-carousel-track .DivFramer1e6fpkuContainer,
-    .Ul.team-carousel-track .DivFramer1sh5u1qContainer,
-    .Ul.team-carousel-track .DivFramer12ssyj2Container,
-    .Ul.team-carousel-track .DivFramer4xnkk2Container,
-    .Ul.team-carousel-track .Variant1,
-    .Ul.team-carousel-track .DivFramer1apf3og {
+    .team-card-image-box {
         width: 100% !important;
         height: auto !important;
     }
 
-    .Ul.team-carousel-track .DivFramer1apf3og .Image {
+    .team-card-img {
         width: 100% !important;
-        height: 310px !important;
+        height: 420px !important;
         object-fit: cover !important;
         object-position: center 20% !important;
+    }
+
+    .team-card-details {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .team-member-name,
+    .team-member-role {
+        text-align: left !important;
     }
 
     /* Mobile Vertical Stack Testimonials (No Marquee, Vertical Cards) */
@@ -1091,6 +1110,8 @@ body {
     position: absolute;
     width: 44px;
     height: auto;
+    top: -15px;
+    left: -30px;
     pointer-events: none;
 }
 
@@ -1383,7 +1404,7 @@ body {
     overflow: hidden;
 }
 
-.DivFramerEoe57Container {
+.team-carousel-mask {
     width: 100%;
     overflow: hidden;
     position: relative;
@@ -1391,18 +1412,20 @@ body {
     mask-image: linear-gradient(90deg, transparent 0%, #000 10%, #000 90%, transparent 100%);
 }
 
-.Ul.team-carousel-track {
+.team-carousel-track {
     display: flex;
+    align-items: center;
     gap: 20px;
     width: max-content;
-    animation: teamFramerInfiniteScroll 35s linear infinite;
+    height: 496px;
+    animation: teamInfiniteScroll 35s linear infinite;
 }
 
-.DivFramerEoe57Container:hover .Ul.team-carousel-track {
+.team-carousel-wrapper:hover .team-carousel-track {
     animation-play-state: paused;
 }
 
-@keyframes teamFramerInfiniteScroll {
+@keyframes teamInfiniteScroll {
     0% {
         transform: translateX(0);
     }
@@ -2386,6 +2409,209 @@ body {
 @keyframes float404 {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-15px); }
+}
+
+/* ==========================================================================
+   Team Section Styles
+   ========================================================================== */
+.team-section {
+    padding-top: 80px;
+    padding-bottom: 160px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    background: #ffffff;
+}
+
+.team-container {
+    width: 100%;
+    max-width: 1440px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    display: flex;
+}
+
+.team-carousel-wrapper {
+    align-self: stretch;
+    height: 500px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.team-carousel-mask {
+    align-self: stretch;
+    flex: 1 1 0;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.team-carousel-track {
+    height: 496px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: max-content;
+}
+
+.team-card {
+    width: 305px;
+    height: 495px;
+    position: relative;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.team-card-image-box {
+    align-self: stretch;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 0px;
+}
+
+.team-card-img {
+    align-self: stretch;
+    height: 424px;
+    width: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.team-card-details {
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.team-member-name {
+    align-self: stretch;
+    text-align: left;
+    color: #1A1717;
+    font-size: 22px;
+    font-family: var(--font-heading);
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.team-member-role {
+    align-self: stretch;
+    text-align: left;
+    color: #333333;
+    font-size: 14.8px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ==========================================================================
+   FAQ Section Styles
+   ========================================================================== */
+.faq-section {
+    padding: 120px 20px 160px;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.faq-container {
+    width: 100%;
+    max-width: 940px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.faq-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.faq-item {
+    border-bottom: 1px solid #E2B5B5;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+
+.faq-question-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    text-align: left;
+}
+
+.faq-question-text {
+    font-family: var(--font-body);
+    font-size: 21.8px;
+    font-weight: 500;
+    color: #1A1717;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    margin: 0;
+}
+
+.faq-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-icon-line {
+    width: 14px;
+    height: 2px;
+    background: #1A1717;
+    position: absolute;
+    transition: background 0.3s ease, transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-icon-line.v-line {
+    transform: rotate(90deg);
+}
+
+.faq-answer-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq-answer-text {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 500;
+    color: #333333;
+    line-height: 25.6px;
+    padding-top: 20px;
+    max-width: 800px;
+    margin: 0;
 }
 
 

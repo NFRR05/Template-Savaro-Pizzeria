@@ -16,7 +16,7 @@
     <meta property="og:url" content="https://savaro-restaurant-template.vercel.app/">
     <meta property="og:type" content="website">
 
-    <link rel="stylesheet" href="style.css?v=14.0">
+    <link rel="stylesheet" href="style.css?v=15.0">
     
     <!-- Google Analytics (GA4) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -76,7 +76,7 @@
             <img src="assets/Logo.svg" alt="Savaro Logo" class="brand-logo">
         </div>
         <div class="nav-right">
-            <button class="menu-btn" id="menuToggle" aria-label="Toggle navigation">
+            <button class="drawer-toggle-btn" id="menuToggle" aria-label="Toggle navigation">
                 <span>MENU</span>
                 <div class="hamburger-icon">
                     <span></span>
@@ -87,8 +87,8 @@
     </header>
 
     <!-- Side Navigation Drawer -->
-    <div class="menu-overlay" id="menuOverlay"></div>
-    <div class="menu-wrapper" id="menuDrawer">
+    <div class="drawer-overlay" id="menuOverlay"></div>
+    <div class="drawer-wrapper" id="menuDrawer">
         <nav class="drawer-nav">
             <ul class="drawer-links">
                 <li><a href="#about">ABOUT</a></li>
@@ -203,7 +203,7 @@
                 <span class="section-subtitle-script animate-blur">our menu</span>
                 <h2 class="section-title-red animate-blur">
                     <span style="position: relative; display: inline-block;">
-                        <img src="assets/lines-red.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                        <img src="assets/lines-red.svg" alt="" class="brand-lines-icon">
                         CRAFTED WITH
                     </span><br>FLAVOR
                 </h2>
@@ -254,210 +254,129 @@
     </section>
 
     <!-- Team Section -->
-    <div data-layer="Team Section" id="team" class="TeamSection" style="padding-top: 80px; padding-bottom: 160px; overflow: hidden; justify-content: center; align-items: center; display: flex; width: 100%; background: #ffffff;">
-      <div data-layer="Container → Content" class="ContainerContent" style="width: 100%; max-width: 1440px; flex-direction: column; justify-content: center; align-items: center; gap: 32px; display: flex">
-        
-        <div class="section-header-block" style="max-width: 1130px;">
-            <span class="section-subtitle-script animate-blur">our chef</span>
-            <h2 class="section-title-red animate-blur">
-                <span style="position: relative; display: inline-block;">
-                    <img src="assets/lines-red.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
-                    About the
-                </span> <br class="mobile-chef-break">Chef
-            </h2>
-        </div>
-
-        <div data-layer="div.framer-eoe57-container" class="DivFramerEoe57Container" style="align-self: stretch; height: 500px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; width: 100%; overflow: hidden; position: relative;">
-          <div data-layer="section:mask-group" class="SectionMaskGroup" style="align-self: stretch; flex: 1 1 0; position: relative; width: 100%; overflow: hidden;">
+    <section class="team-section" id="team">
+        <div class="team-container">
             
-            <div data-layer="ul" class="Ul team-carousel-track" style="height: 496px; display: flex; align-items: center; gap: 20px; width: max-content;">
-                           <!-- Set 1 -->
-              <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-w3kvrk-container" class="DivFramerW3kvrkContainer" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef1.webp" alt="James Ekstrom" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="James Ekstrom" class="JamesEkstrom" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 22px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">James Ekstrom</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Managing Partner" class="ManagingPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.90px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Managing Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-layer="li" class="Li" style="width: 306px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-1e6fpku-container" class="DivFramer1e6fpkuContainer" style="width: 306px; height: 499.56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 425.38px; width: 100%; object-fit: cover; position: relative" src="assets/chef2.webp" alt="Brandon Herwitz" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Brandon Herwitz" class="BrandonHerwitz" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 22px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">Brandon Herwitz</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Sr. Partner" class="SrPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.50px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Sr. Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-1sh5u1q-container" class="DivFramer1sh5u1qContainer" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef3.webp" alt="Marcus Franci" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Marcus Franci" class="MarcusFranci" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 21.80px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">Marcus Franci</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Founding Partner" class="FoundingPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.60px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Founding Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-layer="li" class="Li" style="width: 306px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-12ssyj2-container" class="DivFramer12ssyj2Container" style="width: 306px; height: 499.56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 425.38px; width: 100%; object-fit: cover; position: relative" src="assets/chef4.webp" alt="Davis Carder" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Davis Carder" class="DavisCarder" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 22px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">Davis Carder</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Ops Partner" class="OpsPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.80px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Ops Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-4xnkk2-container" class="DivFramer4xnkk2Container" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef5.webp" alt="Robert Mitchell" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Robert Mitchell" class="RobertMitchell" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 22px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">Robert Mitchell</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Strategy Partner" class="StrategyPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.60px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Strategy Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Set 2 for Infinite Loop -->
-              <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-w3kvrk-container" class="DivFramerW3kvrkContainer" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef1.webp" alt="James Ekstrom" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="James Ekstrom" class="JamesEkstrom" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 22px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">James Ekstrom</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Managing Partner" class="ManagingPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.90px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Managing Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-layer="li" class="Li" style="width: 306px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-1e6fpku-container" class="DivFramer1e6fpkuContainer" style="width: 306px; height: 499.56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 425.38px; width: 100%; object-fit: cover; position: relative" src="assets/chef2.webp" alt="Brandon Herwitz" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Brandon Herwitz" class="BrandonHerwitz" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 22px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">Brandon Herwitz</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Sr. Partner" class="SrPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.50px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Sr. Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-1sh5u1q-container" class="DivFramer1sh5u1qContainer" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef3.webp" alt="Marcus Franci" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Marcus Franci" class="MarcusFranci" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 21.80px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">Marcus Franci</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Founding Partner" class="FoundingPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.60px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Founding Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-layer="li" class="Li" style="width: 306px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-12ssyj2-container" class="DivFramer12ssyj2Container" style="width: 306px; height: 499.56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 425.38px; width: 100%; object-fit: cover; position: relative" src="assets/chef4.webp" alt="Davis Carder" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Davis Carder" class="DavisCarder" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 22px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">Davis Carder</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Ops Partner" class="OpsPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.80px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Ops Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
-                <div data-layer="div.framer-4xnkk2-container" class="DivFramer4xnkk2Container" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                  <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
-                      <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef5.webp" alt="Robert Mitchell" />
-                    </div>
-                    <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                      <div data-layer="h6.framer-text" class="H6FramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Robert Mitchell" class="RobertMitchell" style="align-self: stretch; text-align: left; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); font-size: 22px; font-family: var(--font-heading); font-weight: 500; text-transform: uppercase; line-height: 28.60px;">Robert Mitchell</div>
-                      </div>
-                      <div data-layer="p.framer-text" class="PFramerText" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
-                        <div data-layer="Strategy Partner" class="StrategyPartner" style="align-self: stretch; text-align: left; color: var(--token-6e51681f-6624-4728-bf1a-0ec782285abb, #333333); font-size: 14.60px; font-family: var(--font-body); font-weight: 400; line-height: 25.60px;">Strategy Partner</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <div class="section-header-block" style="max-width: 1130px;">
+                <span class="section-subtitle-script animate-blur">our chef</span>
+                <h2 class="section-title-red animate-blur">
+                    <span style="position: relative; display: inline-block;">
+                        <img src="assets/lines-red.svg" alt="" class="brand-lines-icon">
+                        About the
+                    </span> <br class="mobile-chef-break">Chef
+                </h2>
             </div>
-          </div>
-        </div>
 
-      </div>
-    </div>
+            <div class="team-carousel-wrapper">
+                <div class="team-carousel-mask">
+                    <div class="team-carousel-track">
+                        <!-- Set 1 -->
+                        <div class="team-card">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef1.webp" alt="James Ekstrom" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">James Ekstrom</h3>
+                                <p class="team-member-role">Managing Partner</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef2.webp" alt="Brandon Herwitz" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">Brandon Herwitz</h3>
+                                <p class="team-member-role">Sr. Partner</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef3.webp" alt="Marcus Franci" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">Marcus Franci</h3>
+                                <p class="team-member-role">Founding Partner</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef4.webp" alt="Davis Carder" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">Davis Carder</h3>
+                                <p class="team-member-role">Ops Partner</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef5.webp" alt="Robert Mitchell" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">Robert Mitchell</h3>
+                                <p class="team-member-role">Strategy Partner</p>
+                            </div>
+                        </div>
+
+                        <!-- Set 2 for Infinite Loop -->
+                        <div class="team-card" aria-hidden="true">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef1.webp" alt="James Ekstrom" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">James Ekstrom</h3>
+                                <p class="team-member-role">Managing Partner</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card" aria-hidden="true">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef2.webp" alt="Brandon Herwitz" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">Brandon Herwitz</h3>
+                                <p class="team-member-role">Sr. Partner</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card" aria-hidden="true">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef3.webp" alt="Marcus Franci" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">Marcus Franci</h3>
+                                <p class="team-member-role">Founding Partner</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card" aria-hidden="true">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef4.webp" alt="Davis Carder" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">Davis Carder</h3>
+                                <p class="team-member-role">Ops Partner</p>
+                            </div>
+                        </div>
+
+                        <div class="team-card" aria-hidden="true">
+                            <div class="team-card-image-box">
+                                <img src="assets/chef5.webp" alt="Robert Mitchell" class="team-card-img">
+                            </div>
+                            <div class="team-card-details">
+                                <h3 class="team-member-name">Robert Mitchell</h3>
+                                <p class="team-member-role">Strategy Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Video Showcase Section with Scroll-Driven Fullscreen Zoom -->
     <section class="video-showcase-section" id="showcase">
@@ -475,113 +394,113 @@
     </section>
 
     <!-- FAQ Main Section -->
-    <section class="faq-section" id="faq" style="padding: 120px 20px 160px; background: #ffffff; display: flex; justify-content: center;">
-        <div class="faq-container" style="width: 100%; max-width: 940px; display: flex; flex-direction: column; align-items: center; gap: 32px;">
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
             
             <!-- Title -->
             <div class="section-header-block">
                 <span class="section-subtitle-script animate-blur">faq</span>
                 <h2 class="section-title-red animate-blur">
                     <span style="position: relative; display: inline-block;">
-                        <img src="assets/lines-red.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                        <img src="assets/lines-red.svg" alt="" class="brand-lines-icon">
                         FREQUENTLY ASKED
                     </span><br>QUESTIONS
                 </h2>
             </div>
 
             <!-- FAQ Items Grid -->
-            <div class="faq-list" style="width: 100%; display: flex; flex-direction: column;">
+            <div class="faq-list">
                 <!-- Item 1 -->
-                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
-                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
-                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 21.8px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">Do I need a reservation?</h3>
-                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
-                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                <div class="faq-item">
+                    <button class="faq-question-btn">
+                        <h3 class="faq-question-text">Do I need a reservation?</h3>
+                        <div class="faq-icon">
+                            <div class="faq-icon-line h-line"></div>
+                            <div class="faq-icon-line v-line"></div>
                         </div>
                     </button>
-                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                    <div class="faq-answer-wrapper">
+                        <p class="faq-answer-text">
                             Reservations are highly recommended, especially for weekend dining, evening dinners, and large groups. Walk-ins are always welcome, though wait times may vary based on availability.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
-                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
-                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 21.8px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">How can I make or modify a reservation?</h3>
-                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
-                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                <div class="faq-item">
+                    <button class="faq-question-btn">
+                        <h3 class="faq-question-text">How can I make or modify a reservation?</h3>
+                        <div class="faq-icon">
+                            <div class="faq-icon-line h-line"></div>
+                            <div class="faq-icon-line v-line"></div>
                         </div>
                     </button>
-                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                    <div class="faq-answer-wrapper">
+                        <p class="faq-answer-text">
                             You can easily book or update your table reservation directly through our online reservation form below, or by contacting our reservations desk at +880 321 456 987.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
-                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
-                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 21.7px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">Do you offer vegetarian, vegan, and gluten-free options?</h3>
-                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
-                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                <div class="faq-item">
+                    <button class="faq-question-btn">
+                        <h3 class="faq-question-text">Do you offer vegetarian, vegan, and gluten-free options?</h3>
+                        <div class="faq-icon">
+                            <div class="faq-icon-line h-line"></div>
+                            <div class="faq-icon-line v-line"></div>
                         </div>
                     </button>
-                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                    <div class="faq-answer-wrapper">
+                        <p class="faq-answer-text">
                             Yes, our menu features a wide selection of vegetarian, vegan, and gluten-free pizzas and starters prepared with organic ingredients. Please inform your server of any dietary needs.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
-                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
-                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 21.5px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">Do you host private events or celebrations?</h3>
-                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
-                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                <div class="faq-item">
+                    <button class="faq-question-btn">
+                        <h3 class="faq-question-text">Do you host private events or celebrations?</h3>
+                        <div class="faq-icon">
+                            <div class="faq-icon-line h-line"></div>
+                            <div class="faq-icon-line v-line"></div>
                         </div>
                     </button>
-                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                    <div class="faq-answer-wrapper">
+                        <p class="faq-answer-text">
                             Absolutely! We accommodate birthday parties, corporate gatherings, and private events with custom tasting menus and dedicated service areas. Contact our event coordinator for details.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 5 -->
-                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
-                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
-                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 22px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">Is takeaway or home delivery available?</h3>
-                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
-                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                <div class="faq-item">
+                    <button class="faq-question-btn">
+                        <h3 class="faq-question-text">Is takeaway or home delivery available?</h3>
+                        <div class="faq-icon">
+                            <div class="faq-icon-line h-line"></div>
+                            <div class="faq-icon-line v-line"></div>
                         </div>
                     </button>
-                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                    <div class="faq-answer-wrapper">
+                        <p class="faq-answer-text">
                             Yes, you can order takeaway for quick pick-up or place a delivery order directly through our official delivery partner applications.
                         </p>
                     </div>
                 </div>
 
                 <!-- Item 6 -->
-                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
-                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
-                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 22px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">What are your opening hours and parking facilities?</h3>
-                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
-                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                <div class="faq-item">
+                    <button class="faq-question-btn">
+                        <h3 class="faq-question-text">What are your opening hours and parking facilities?</h3>
+                        <div class="faq-icon">
+                            <div class="faq-icon-line h-line"></div>
+                            <div class="faq-icon-line v-line"></div>
                         </div>
                     </button>
-                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
-                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                    <div class="faq-answer-wrapper">
+                        <p class="faq-answer-text">
                             We are open Tuesday through Sunday from 12:00 PM to 11:00 PM. Complimentary valet service and street parking are available directly outside our restaurant entrance.
                         </p>
                     </div>
@@ -797,7 +716,7 @@
             <span class="section-subtitle-script animate-blur">find our pizzeria</span>
             <h2 class="section-title-red animate-blur">
                 <span style="position: relative; display: inline-block;">
-                    <img src="assets/lines-red.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                    <img src="assets/lines-red.svg" alt="" class="brand-lines-icon">
                     STORE LOCATION
                 </span><br>&amp; HOURS
             </h2>
