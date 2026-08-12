@@ -179,6 +179,10 @@ body {
     color: var(--color-brand-red) !important;
 }
 
+.menu-btn.active span {
+    color: var(--color-brand-red) !important;
+}
+
 .hamburger-icon {
     position: relative;
     width: 18px;
@@ -867,7 +871,7 @@ body {
         max-width: 100% !important;
         padding: 0 !important;
         margin: 0 !important;
-        align-items: stretch !important;
+        align-items: flex-start !important;
     }
 
     .booking-form-heading {
@@ -2225,7 +2229,7 @@ body {
 .privacy-subtitle {
     font-family: var(--font-script);
     font-size: 32px;
-    color: var(--color-brand-red);
+    color: #1A1717;
     display: block;
     margin-bottom: 8px;
 }
@@ -2233,7 +2237,7 @@ body {
 .privacy-title {
     font-family: var(--font-heading);
     font-size: clamp(36px, 5vw, 64px);
-    color: #1A1717;
+    color: var(--color-brand-red);
     text-transform: uppercase;
     margin-bottom: 16px;
     letter-spacing: 1px;
