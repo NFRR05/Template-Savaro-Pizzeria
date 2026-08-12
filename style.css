@@ -415,7 +415,13 @@ body {
 }
 
 .hero-section .decorative-lines {
+    position: absolute;
+    width: 44px;
+    height: auto;
+    left: -48px;
+    top: -14px;
     filter: brightness(0) invert(1);
+    pointer-events: none;
 }
 
 .script-text {
@@ -591,10 +597,14 @@ body {
         font-size: 32px;
     }
 
-    .decorative-lines {
-        left: -32px;
-        top: -16px;
-        width: 44px;
+    .subtitle-container {
+        margin-bottom: 8px !important;
+    }
+
+    .hero-section .decorative-lines {
+        left: -42px !important;
+        top: -16px !important;
+        width: 38px !important;
     }
 
     .hero-description {
