@@ -411,7 +411,6 @@ body {
     height: auto;
     left: -44px;
     top: -12px;
-    filter: brightness(0) saturate(100%) invert(18%) sepia(96%) saturate(6935%) hue-rotate(358deg) brightness(100%) contrast(102%);
     pointer-events: none;
 }
 
@@ -421,7 +420,6 @@ body {
     height: auto;
     left: -48px;
     top: -14px;
-    filter: brightness(0) invert(1);
     pointer-events: none;
 }
 
