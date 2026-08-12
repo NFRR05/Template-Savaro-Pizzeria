@@ -489,7 +489,7 @@ body {
     display: flex;
 }
 
-.hero-btn {
+.btn {
     display: inline-flex;
     align-items: center;
     text-decoration: none;
@@ -536,27 +536,27 @@ body {
 }
 
 /* Hover Animation: Color Inversion & Smooth Arrow Rotation (points right) */
-.hero-btn:hover .btn-text-wrapper {
+.btn:hover .btn-text-wrapper {
     background: var(--color-brand-red);
 }
 
-.hero-btn:hover .btn-text {
+.btn:hover .btn-text {
     color: #ffffff;
 }
 
-.hero-btn:hover .btn-icon-wrapper {
+.btn:hover .btn-icon-wrapper {
     background: #ffffff;
     border-color: var(--color-brand-red);
 }
 
-.hero-btn:hover .btn-arrow-icon {
+.btn:hover .btn-arrow-icon {
     stroke: var(--color-brand-red) !important;
     color: var(--color-brand-red) !important;
     transform: rotate(45deg);
 }
 
-.hero-btn:hover .btn-arrow-icon line,
-.hero-btn:hover .btn-arrow-icon polyline {
+.btn:hover .btn-arrow-icon line,
+.btn:hover .btn-arrow-icon polyline {
     stroke: var(--color-brand-red) !important;
 }
 
@@ -664,7 +664,7 @@ body {
     }
 
     /* FORCED 100% Full Width Mobile CTA Buttons */
-    .hero-btn,
+    .btn,
     .booking-submit-btn,
     .form-submit-row,
     .hero-cta-wrapper,
@@ -675,11 +675,15 @@ body {
         box-sizing: border-box !important;
     }
 
-    .hero-btn {
+    .hero-cta-wrapper {
+        padding: 0 20px !important;
+    }
+
+    .btn {
         justify-content: space-between !important;
     }
 
-    .hero-btn .btn-text-wrapper {
+    .btn .btn-text-wrapper {
         flex: 1 !important;
         text-align: center !important;
     }
