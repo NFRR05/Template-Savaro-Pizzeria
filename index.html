@@ -3,8 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Savaro - Taste More Feel</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Savaro - Artisanal Pizzeria & Fine Italian Dining</title>
+    <meta name="description" content="Savaro is an authentic Italian artisanal pizzeria. Explore handcrafted wood-fired pizzas, gourmet appetizers, fine wines, and book your reservation online.">
+    <link rel="stylesheet" href="style.css?v=12.0">
+    
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    
+    <!-- Structured Data (JSON-LD LocalBusiness / PizzaRestaurant) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PizzaRestaurant",
+      "name": "Savaro Pizzeria",
+      "image": "https://savaro-pizzeria.com/assets/hero-img.png",
+      "@id": "https://savaro-pizzeria.com",
+      "url": "https://savaro-pizzeria.com",
+      "telephone": "+1-555-234-5678",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "124 Culinary Way",
+        "addressLocality": "New York",
+        "addressRegion": "NY",
+        "postalCode": "10001",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.7128,
+        "longitude": -74.0060
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "menu": "https://savaro-pizzeria.com/#menu",
+      "servesCuisine": "Italian, Pizza",
+      "acceptsReservations": "True"
+    }
+    </script>
 </head>
 <body>
 
@@ -33,16 +81,29 @@
         <nav class="drawer-nav">
             <ul class="drawer-links">
                 <li><a href="#about">ABOUT</a></li>
-                <li><a href="#events">OUR EVENTS</a></li>
-                <li><a href="#blogs">BLOGS</a></li>
                 <li><a href="#menu">OUR MENU</a></li>
+                <li><a href="#location">LOCATION</a></li>
             </ul>
         </nav>
+
+        <div class="drawer-cta-wrapper" style="margin: 24px 0;">
+            <a href="#reservation" class="hero-btn drawer-cta-btn" style="text-decoration: none; display: inline-flex;">
+                <div class="btn-text-wrapper">
+                    <span class="btn-text">BOOK A TABLE</span>
+                </div>
+                <div class="btn-icon-wrapper">
+                    <svg class="btn-arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </div>
+            </a>
+        </div>
+
         <div class="drawer-divider"></div>
         <div class="drawer-footer">
-            <a href="#contact" class="drawer-footer-link">CONTACT</a>
-            <a href="#privacy" class="drawer-footer-link">PRIVACY</a>
-            <a href="#faq" class="drawer-footer-link">FAQ</a>
+            <a href="#reservation" class="drawer-footer-link">CONTACT</a>
+            <a href="privacy-policy.html" class="drawer-footer-link">PRIVACY</a>
         </div>
     </div>
 
@@ -59,12 +120,12 @@
             
             <!-- Script Subtitle Block with top-left decorative lines -->
             <div class="subtitle-container">
-                <img src="assets/lines.svg" alt="" class="decorative-lines">
-                <span class="script-text">savaro presents</span>
+                <img src="assets/lines.svg" alt="" class="decorative-lines animate-blur">
+                <span class="script-text animate-blur">savaro presents</span>
             </div>
 
             <!-- Main Title Banner in Clash Display -->
-            <h1 class="hero-title">
+            <h1 class="hero-title animate-blur">
                 <span class="title-line">TASTE</span>
                 <span class="title-line">MORE FEEL</span>
                 <span class="title-line">SAVARO</span>
@@ -101,11 +162,11 @@
             
             <!-- Section Subtitle in Telma Script -->
             <div class="about-badge">
-                <span class="about-subtitle">about us</span>
+                <span class="about-subtitle animate-blur">about us</span>
             </div>
 
             <!-- Big Inline Text Heading with Pizza Images embedded -->
-            <h2 class="about-heading">
+            <h2 class="about-heading animate-blur">
                 AT SAVARO, WE BELIEVE GREAT 
                 <span class="inline-img-badge"><img src="assets/pizza-inline-1.png" alt="Wood-fired pizza"></span>
                 FOOD IS MORE THAN A MEAL 
@@ -140,134 +201,44 @@
         <div class="menu-container">
             
             <!-- Title Header -->
-            <div class="menu-title-wrapper">
-                <div class="menu-subtitle-box">
-                    <span class="menu-subtitle">our menu</span>
-                </div>
-                <h2 class="menu-main-title">
-                    EXPLORE <span class="menu-title-the-wrapper" style="position: relative; display: inline-block;">THE<img src="assets/lines.svg" alt="" class="brand-lines-icon menu-lines-the"></span> SAVARO MENU
+            <div class="section-header-block">
+                <span class="section-subtitle-script animate-blur">our menu</span>
+                <h2 class="section-title-red animate-blur">
+                    <span style="position: relative; display: inline-block;">
+                        <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                        CRAFTED WITH
+                    </span><br>FLAVOR
                 </h2>
+                <p class="menu-description animate-blur">
+                    Plan your visit and enjoy a memorable dining experience with exceptional food and warm hospitality.
+                </p>
             </div>
 
-            <!-- Menu Items Grid -->
-            <div class="menu-cards-grid">
-                
-                <!-- Card 1: American Burger -->
-                <article class="menu-card">
-                    <div class="menu-card-image-box">
-                        <img src="assets/pizza-inline-1.png" alt="American Burger" class="menu-card-img">
+            <!-- Menu Gallery Infinite Marquee Carousel -->
+            <div class="menu-gallery-marquee-wrapper">
+                <div class="menu-gallery-marquee">
+                    <div class="menu-gallery-content">
+                        <div class="menu-gallery-item h-tall"><img src="assets/menu1.png" alt="Gourmet Artisanal Pizza"></div>
+                        <div class="menu-gallery-item h-medium"><img src="assets/menu2.png" alt="Raspberry Dessert & Cocktail"></div>
+                        <div class="menu-gallery-item h-short"><img src="assets/menu3.png" alt="Crispy Fried Chicken"></div>
+                        <div class="menu-gallery-item h-tall"><img src="assets/pizza-inline-1.png" alt="American Burger"></div>
+                        <div class="menu-gallery-item h-square"><img src="assets/pizza-inline-2.png" alt="Sweet Corn Cream"></div>
+                        <div class="menu-gallery-item h-tall"><img src="assets/pizza-inline-3.png" alt="Steamed Dumplings"></div>
+                        <div class="menu-gallery-item h-square"><img src="assets/pizza-inline-4.png" alt="Ferrero Chocolate Cake"></div>
+                        <div class="menu-gallery-item h-medium"><img src="assets/booking-img.png" alt="Wood Oven Artisan Pizza"></div>
                     </div>
-                    <div class="menu-card-details">
-                        <div class="menu-card-top">
-                            <h3 class="menu-item-name">AMERICAN BURGER</h3>
-                            <div class="menu-item-price-info">
-                                <span class="price-starting">Starting</span>
-                                <span class="price-amount">$49</span>
-                            </div>
-                        </div>
-                        <div class="menu-card-bottom">
-                            <p class="menu-item-desc">Juicy beef patty, melted cheese, fresh toppings, and classic house sauce in a toasted bun.</p>
-                            <a href="#cart" class="hero-btn menu-add-btn">
-                                <div class="btn-text-wrapper">
-                                    <span class="btn-text">Add to cart</span>
-                                </div>
-                                <div class="btn-icon-wrapper">
-                                    <svg class="btn-plus-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 5V19M5 12H19" stroke="#FE120F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
+                    <!-- Duplicate for seamless infinite marquee loop -->
+                    <div class="menu-gallery-content" aria-hidden="true">
+                        <div class="menu-gallery-item h-tall"><img src="assets/menu1.png" alt="Gourmet Artisanal Pizza"></div>
+                        <div class="menu-gallery-item h-medium"><img src="assets/menu2.png" alt="Raspberry Dessert & Cocktail"></div>
+                        <div class="menu-gallery-item h-short"><img src="assets/menu3.png" alt="Crispy Fried Chicken"></div>
+                        <div class="menu-gallery-item h-tall"><img src="assets/pizza-inline-1.png" alt="American Burger"></div>
+                        <div class="menu-gallery-item h-square"><img src="assets/pizza-inline-2.png" alt="Sweet Corn Cream"></div>
+                        <div class="menu-gallery-item h-tall"><img src="assets/pizza-inline-3.png" alt="Steamed Dumplings"></div>
+                        <div class="menu-gallery-item h-square"><img src="assets/pizza-inline-4.png" alt="Ferrero Chocolate Cake"></div>
+                        <div class="menu-gallery-item h-medium"><img src="assets/booking-img.png" alt="Wood Oven Artisan Pizza"></div>
                     </div>
-                </article>
-
-                <!-- Card 2: Sweet Corn Cream -->
-                <article class="menu-card">
-                    <div class="menu-card-image-box">
-                        <img src="assets/pizza-inline-2.png" alt="Sweet Corn Cream" class="menu-card-img">
-                    </div>
-                    <div class="menu-card-details">
-                        <div class="menu-card-top">
-                            <h3 class="menu-item-name">SWEET CORN CREAM</h3>
-                            <div class="menu-item-price-info">
-                                <span class="price-starting">Starting</span>
-                                <span class="price-amount">$39</span>
-                            </div>
-                        </div>
-                        <div class="menu-card-bottom">
-                            <p class="menu-item-desc">Creamy sweet corn ice cream with a smooth texture and naturally sweet finish.</p>
-                            <a href="#cart" class="hero-btn menu-add-btn">
-                                <div class="btn-text-wrapper">
-                                    <span class="btn-text">Add to cart</span>
-                                </div>
-                                <div class="btn-icon-wrapper">
-                                    <svg class="btn-plus-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 5V19M5 12H19" stroke="#FE120F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 3: Steamed Chicken Momo -->
-                <article class="menu-card">
-                    <div class="menu-card-image-box">
-                        <img src="assets/pizza-inline-3.png" alt="Steamed Chicken Momo" class="menu-card-img">
-                    </div>
-                    <div class="menu-card-details">
-                        <div class="menu-card-top">
-                            <h3 class="menu-item-name">STEAMED CHICKEN MOMO</h3>
-                            <div class="menu-item-price-info">
-                                <span class="price-starting">Starting</span>
-                                <span class="price-amount">$39</span>
-                            </div>
-                        </div>
-                        <div class="menu-card-bottom">
-                            <p class="menu-item-desc">Steamed dumplings filled with seasoned meat, served with flavorful dipping sauce.</p>
-                            <a href="#cart" class="hero-btn menu-add-btn">
-                                <div class="btn-text-wrapper">
-                                    <span class="btn-text">Add to cart</span>
-                                </div>
-                                <div class="btn-icon-wrapper">
-                                    <svg class="btn-plus-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 5V19M5 12H19" stroke="#FE120F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Card 4: Ferrero Fantasy -->
-                <article class="menu-card">
-                    <div class="menu-card-image-box">
-                        <img src="assets/pizza-inline-4.png" alt="Ferrero Fantasy" class="menu-card-img">
-                    </div>
-                    <div class="menu-card-details">
-                        <div class="menu-card-top">
-                            <h3 class="menu-item-name">FERRERO FANTASY</h3>
-                            <div class="menu-item-price-info">
-                                <span class="price-starting">Starting</span>
-                                <span class="price-amount">$49</span>
-                            </div>
-                        </div>
-                        <div class="menu-card-bottom">
-                            <p class="menu-item-desc">Rich chocolate cake layered with Ferrero flavor, hazelnut, crunchy texture delight.</p>
-                            <a href="#cart" class="hero-btn menu-add-btn">
-                                <div class="btn-text-wrapper">
-                                    <span class="btn-text">Add to cart</span>
-                                </div>
-                                <div class="btn-icon-wrapper">
-                                    <svg class="btn-plus-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M12 5V19M5 12H19" stroke="#FE120F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
+                </div>
             </div>
 
         </div>
@@ -275,27 +246,16 @@
 
     <!-- Team Section -->
     <div data-layer="Team Section" id="team" class="TeamSection" style="padding-top: 80px; padding-bottom: 160px; overflow: hidden; justify-content: center; align-items: center; display: flex; width: 100%; background: #ffffff;">
-      <div data-layer="Container → Content" class="ContainerContent" style="width: 100%; max-width: 1440px; flex-direction: column; justify-content: center; align-items: center; gap: 80px; display: flex">
+      <div data-layer="Container → Content" class="ContainerContent" style="width: 100%; max-width: 1440px; flex-direction: column; justify-content: center; align-items: center; gap: 32px; display: flex">
         
-        <div data-layer="Title Wrapper" class="TitleWrapper" style="width: 100%; max-width: 1130px; position: relative; flex-direction: column; justify-content: center; align-items: center; gap: 20px; display: flex">
-          <div data-layer="div.framer-1p8vgup-container" class="DivFramer1p8vgupContainer" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; display: flex">
-            <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; justify-content: center; align-items: center; display: inline-flex">
-              <div data-layer="div.framer-1o8y0lm" class="DivFramer1o8y0lm" style="position: relative; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-                <div data-layer="h4.framer-text" class="H4FramerText" style="position: relative; font-family: var(--font-script); font-size: 38px; color: var(--token-caa0f8c4-a0ee-479c-a1fd-42fde3b8d7b5, #1A1717); text-align: center;">
-                  our chef
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <div data-layer="Title" class="Title" style="align-self: stretch; position: relative; justify-content: center; align-items: center; display: inline-flex">
-            <div data-layer="div.framer-eur9gk" class="DivFramerEur9gk" style="width: max-content; position: relative; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-              <img src="assets/lines.svg" alt="" class="brand-lines-icon team-lines-top-left">
-              <h2 data-layer="h2.framer-text" class="H2FramerText" style="align-self: stretch; text-align: center; color: var(--token-f886972d-4178-46b6-9ce9-b210e8ad5e30, #FE120F); font-size: 66px; font-family: 'Clash Display', var(--font-heading); font-weight: 600; text-transform: uppercase; line-height: 1.1; letter-spacing: 1.32px;">
-                About the Chef
-              </h2>
-            </div>
-          </div>
+        <div class="section-header-block" style="max-width: 1130px;">
+            <span class="section-subtitle-script animate-blur">our chef</span>
+            <h2 class="section-title-red animate-blur">
+                <span style="position: relative; display: inline-block;">
+                    <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                    About the
+                </span> <br class="mobile-chef-break">Chef
+            </h2>
         </div>
 
         <div data-layer="div.framer-eoe57-container" class="DivFramerEoe57Container" style="align-self: stretch; height: 500px; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; width: 100%; overflow: hidden; position: relative;">
@@ -306,7 +266,7 @@
               <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-w3kvrk-container" class="DivFramerW3kvrkContainer" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef1.png" alt="James Ekstrom" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -324,7 +284,7 @@
               <div data-layer="li" class="Li" style="width: 306px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-1e6fpku-container" class="DivFramer1e6fpkuContainer" style="width: 306px; height: 499.56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 425.38px; width: 100%; object-fit: cover; position: relative" src="assets/chef2.png" alt="Brandon Herwitz" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -342,7 +302,7 @@
               <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-1sh5u1q-container" class="DivFramer1sh5u1qContainer" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef3.png" alt="Marcus Franci" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -360,7 +320,7 @@
               <div data-layer="li" class="Li" style="width: 306px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-12ssyj2-container" class="DivFramer12ssyj2Container" style="width: 306px; height: 499.56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 425.38px; width: 100%; object-fit: cover; position: relative" src="assets/chef4.png" alt="Davis Carder" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -378,7 +338,7 @@
               <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-4xnkk2-container" class="DivFramer4xnkk2Container" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef5.png" alt="Robert Mitchell" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -397,7 +357,7 @@
               <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-w3kvrk-container" class="DivFramerW3kvrkContainer" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef1.png" alt="James Ekstrom" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -415,7 +375,7 @@
               <div data-layer="li" class="Li" style="width: 306px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-1e6fpku-container" class="DivFramer1e6fpkuContainer" style="width: 306px; height: 499.56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 425.38px; width: 100%; object-fit: cover; position: relative" src="assets/chef2.png" alt="Brandon Herwitz" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -433,7 +393,7 @@
               <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-1sh5u1q-container" class="DivFramer1sh5u1qContainer" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef3.png" alt="Marcus Franci" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -451,7 +411,7 @@
               <div data-layer="li" class="Li" style="width: 306px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-12ssyj2-container" class="DivFramer12ssyj2Container" style="width: 306px; height: 499.56px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 425.38px; width: 100%; object-fit: cover; position: relative" src="assets/chef4.png" alt="Davis Carder" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -469,7 +429,7 @@
               <div data-layer="li" class="Li" style="width: 305px; height: 495px; position: relative; flex-shrink: 0;">
                 <div data-layer="div.framer-4xnkk2-container" class="DivFramer4xnkk2Container" style="width: 305px; height: 498.19px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
                   <div data-layer="Variant 1" class="Variant1" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; gap: 20px; display: flex">
-                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 4px;">
+                    <div data-layer="div.framer-1apf3og" class="DivFramer1apf3og" style="align-self: stretch; overflow: hidden; flex-direction: column; justify-content: center; align-items: flex-start; display: flex; border-radius: 0px;">
                       <img data-layer="Image" class="Image" style="align-self: stretch; height: 424px; width: 100%; object-fit: cover; position: relative" src="assets/chef5.png" alt="Robert Mitchell" />
                     </div>
                     <div data-layer="Text Wrapper → Author Details" class="TextWrapperAuthorDetails" style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: flex">
@@ -499,12 +459,465 @@
                 </video>
                 <div class="video-overlay-gradient"></div>
                 <div class="video-overlay-content">
-                    <span class="video-subtitle">artisan mastery</span>
-                    <h2 class="video-title">CRAFTED WITH PASSION & FIRE</h2>
+                    <span class="video-subtitle blur-text" id="videoSubtitle">artisan mastery</span>
+                    <h2 class="video-title blur-text" id="videoTitle">CRAFTED WITH PASSION & FIRE</h2>
+                </div>
+            </div>
+    </section>
+
+    <!-- FAQ Main Section -->
+    <section class="faq-section" id="faq" style="padding: 120px 20px 160px; background: #ffffff; display: flex; justify-content: center;">
+        <div class="faq-container" style="width: 100%; max-width: 940px; display: flex; flex-direction: column; align-items: center; gap: 32px;">
+            
+            <!-- Title -->
+            <div class="section-header-block">
+                <span class="section-subtitle-script animate-blur">faq</span>
+                <h2 class="section-title-red animate-blur">
+                    <span style="position: relative; display: inline-block;">
+                        <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                        FREQUENTLY ASKED
+                    </span><br>QUESTIONS
+                </h2>
+            </div>
+
+            <!-- FAQ Items Grid -->
+            <div class="faq-list" style="width: 100%; display: flex; flex-direction: column;">
+                <!-- Item 1 -->
+                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
+                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
+                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 21.8px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">Do I need a reservation?</h3>
+                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
+                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                        </div>
+                    </button>
+                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                            Reservations are highly recommended, especially for weekend dining, evening dinners, and large groups. Walk-ins are always welcome, though wait times may vary based on availability.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
+                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
+                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 21.8px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">How can I make or modify a reservation?</h3>
+                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
+                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                        </div>
+                    </button>
+                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                            You can easily book or update your table reservation directly through our online reservation form below, or by contacting our reservations desk at +880 321 456 987.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
+                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
+                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 21.7px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">Do you offer vegetarian, vegan, and gluten-free options?</h3>
+                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
+                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                        </div>
+                    </button>
+                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                            Yes, our menu features a wide selection of vegetarian, vegan, and gluten-free pizzas and starters prepared with organic ingredients. Please inform your server of any dietary needs.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
+                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
+                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 21.5px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">Do you host private events or group celebrations?</h3>
+                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
+                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                        </div>
+                    </button>
+                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                            Absolutely! We accommodate birthday parties, corporate gatherings, and private events with custom tasting menus and dedicated service areas. Contact our event coordinator for details.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
+                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
+                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 22px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">Is takeaway or home delivery available?</h3>
+                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
+                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                        </div>
+                    </button>
+                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                            Yes, you can order takeaway for quick pick-up or place a delivery order directly through our official delivery partner applications.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="faq-item" style="border-bottom: 1px solid #E2B5B5; padding-bottom: 25px; margin-bottom: 25px;">
+                    <button class="faq-question-btn" style="width: 100%; display: flex; justify-content: space-between; align-items: center; background: none; border: none; cursor: pointer; padding: 0; text-align: left;">
+                        <h3 class="faq-question-text" style="font-family: var(--font-body); font-size: 22px; font-weight: 500; color: #1A1717; text-transform: uppercase; transition: color 0.3s ease;">What are your opening hours and parking facilities?</h3>
+                        <div class="faq-icon" style="position: relative; width: 16px; height: 16px; display: flex; align-items: center; justify-content: center; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                            <div class="faq-icon-line h-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transition: background 0.3s ease;"></div>
+                            <div class="faq-icon-line v-line" style="width: 14px; height: 2px; background: #1A1717; position: absolute; transform: rotate(90deg); transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s ease;"></div>
+                        </div>
+                    </button>
+                    <div class="faq-answer-wrapper" style="max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.16, 1, 0.3, 1);">
+                        <p class="faq-answer-text" style="font-family: var(--font-body); font-size: 15px; font-weight: 500; color: #333333; line-height: 25.6px; padding-top: 20px; max-width: 800px;">
+                            We are open Tuesday through Sunday from 12:00 PM to 11:00 PM. Complimentary valet service and street parking are available directly outside our restaurant entrance.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-container">
+            <div class="section-header-block">
+                <span class="section-subtitle-script animate-blur">testimonials</span>
+                <h2 class="section-title-red animate-blur">
+                    <span style="position: relative; display: inline-block;">
+                        <img src="assets/lines.svg" alt="" class="brand-lines-icon">
+                        WHAT THEY'RE SAYING
+                    </span><br>ABOUT OUR SERVICE
+                </h2>
+            </div>
+            
+            <div class="testimonials-marquee-wrapper">
+                <!-- Left/Right gradients -->
+                <div class="marquee-gradient marquee-gradient-left"></div>
+                <div class="marquee-gradient marquee-gradient-right"></div>
+                
+                <div class="testimonials-marquee">
+                    <div class="marquee-content">
+                        <!-- Card 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-icon">
+                                <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5 24H0V11.25C0 5.036 5.036 0 11.25 0V6.75C8.764 6.75 6.75 8.764 6.75 11.25V13.5H13.5V24ZM30 24H16.5V11.25C16.5 5.036 21.536 0 27.75 0V6.75C25.264 6.75 23.25 8.764 23.25 11.25V13.5H30V24Z" fill="#FE120F"/>
+                                </svg>
+                            </div>
+                            <h3 class="testimonial-text">“An unforgettable dining experience! The food, ambiance, and live music made our evening truly special.”</h3>
+                            <div class="testimonial-author">
+                                <h4 class="author-name">Emily Carter</h4>
+                                <p class="author-role">Managing Partner</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-icon">
+                                <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5 24H0V11.25C0 5.036 5.036 0 11.25 0V6.75C8.764 6.75 6.75 8.764 6.75 11.25V13.5H13.5V24ZM30 24H16.5V11.25C16.5 5.036 21.536 0 27.75 0V6.75C25.264 6.75 23.25 8.764 23.25 11.25V13.5H30V24Z" fill="#FE120F"/>
+                                </svg>
+                            </div>
+                            <h3 class="testimonial-text">“Savaro is the perfect place for great food and amazing vibes. Every dish was full of flavor.”</h3>
+                            <div class="testimonial-author">
+                                <h4 class="author-name">Meherin Islam</h4>
+                                <p class="author-role">Hospitality Lead</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-icon">
+                                <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5 24H0V11.25C0 5.036 5.036 0 11.25 0V6.75C8.764 6.75 6.75 8.764 6.75 11.25V13.5H13.5V24ZM30 24H16.5V11.25C16.5 5.036 21.536 0 27.75 0V6.75C25.264 6.75 23.25 8.764 23.25 11.25V13.5H30V24Z" fill="#FE120F"/>
+                                </svg>
+                            </div>
+                            <h3 class="testimonial-text">“More than just a place to dine, Savaro is a space to connect, relax, and savor the moment. Food made with passion and served with care.”</h3>
+                            <div class="testimonial-author">
+                                <h4 class="author-name">Robert Mitchell</h4>
+                                <p class="author-role">Managing Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="marquee-content" aria-hidden="true">
+                        <!-- Card 1 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-icon">
+                                <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5 24H0V11.25C0 5.036 5.036 0 11.25 0V6.75C8.764 6.75 6.75 8.764 6.75 11.25V13.5H13.5V24ZM30 24H16.5V11.25C16.5 5.036 21.536 0 27.75 0V6.75C25.264 6.75 23.25 8.764 23.25 11.25V13.5H30V24Z" fill="#FE120F"/>
+                                </svg>
+                            </div>
+                            <h3 class="testimonial-text">“An unforgettable dining experience! The food, ambiance, and live music made our evening truly special.”</h3>
+                            <div class="testimonial-author">
+                                <h4 class="author-name">Emily Carter</h4>
+                                <p class="author-role">Managing Partner</p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-icon">
+                                <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5 24H0V11.25C0 5.036 5.036 0 11.25 0V6.75C8.764 6.75 6.75 8.764 6.75 11.25V13.5H13.5V24ZM30 24H16.5V11.25C16.5 5.036 21.536 0 27.75 0V6.75C25.264 6.75 23.25 8.764 23.25 11.25V13.5H30V24Z" fill="#FE120F"/>
+                                </svg>
+                            </div>
+                            <h3 class="testimonial-text">“Savaro is the perfect place for great food and amazing vibes. Every dish was full of flavor.”</h3>
+                            <div class="testimonial-author">
+                                <h4 class="author-name">Meherin Islam</h4>
+                                <p class="author-role">Hospitality Lead</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="testimonial-card">
+                            <div class="testimonial-icon">
+                                <svg width="30" height="24" viewBox="0 0 30 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.5 24H0V11.25C0 5.036 5.036 0 11.25 0V6.75C8.764 6.75 6.75 8.764 6.75 11.25V13.5H13.5V24ZM30 24H16.5V11.25C16.5 5.036 21.536 0 27.75 0V6.75C25.264 6.75 23.25 8.764 23.25 11.25V13.5H30V24Z" fill="#FE120F"/>
+                                </svg>
+                            </div>
+                            <h3 class="testimonial-text">“More than just a place to dine, Savaro is a space to connect, relax, and savor the moment. Food made with passion and served with care.”</h3>
+                            <div class="testimonial-author">
+                                <h4 class="author-name">Robert Mitchell</h4>
+                                <p class="author-role">Managing Partner</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Reservation Section -->
+    <section class="booking-section" id="reservation">
+        <div class="booking-container">
+            
+            <!-- Title Header -->
+            <div class="section-header-block">
+                <span class="section-subtitle-script animate-blur">booking</span>
+                <h2 class="section-title-red animate-blur">
+                    <span style="position: relative; display: inline-block;">
+                        <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                        RESERVE
+                    </span> <br class="desktop-title-break">YOUR TABLE
+                </h2>
+                <p class="booking-description animate-blur" style="margin: 0 auto; text-align: center;">
+                    Plan your visit and enjoy a memorable dining experience with exceptional food and warm hospitality.
+                </p>
+            </div>
+
+            <!-- Content Grid: Image + Form -->
+            <div class="booking-content-grid">
+                
+                <!-- Left Column: Atmosphere Image -->
+                <div class="booking-image-box">
+                    <img src="assets/booking-img.png" alt="Savaro Restaurant Reservation" class="booking-img">
+                </div>
+
+                <!-- Right Column: Reservation Form -->
+                <div class="booking-form-box">
+                    <h3 class="booking-form-heading">REACH OUT TO US—WE'D LOVE TO HEAR FROM YOU!</h3>
+                    
+                    <form class="booking-form" action="thank-you.html" method="GET" onsubmit="event.preventDefault(); window.location.href='thank-you.html';">
+                        
+                        <!-- Full Name -->
+                        <div class="form-group full-width">
+                            <label class="form-label">NAME</label>
+                            <input type="text" class="form-input" placeholder="Full Name" required>
+                        </div>
+
+                        <!-- Email & Phone -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">EMAIL ADDRESS</label>
+                                <input type="email" class="form-input" placeholder="Email Address" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">PHONE</label>
+                                <input type="tel" class="form-input" placeholder="Phone Number" required>
+                            </div>
+                        </div>
+
+                        <!-- Date & Time -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">DATE</label>
+                                <input type="date" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">TIME</label>
+                                <input type="time" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="form-group full-width">
+                            <label class="form-label">MESSAGE</label>
+                            <textarea class="form-textarea" placeholder="Messages" rows="4"></textarea>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-submit-row">
+                            <button type="submit" class="hero-btn booking-submit-btn">
+                                <div class="btn-text-wrapper">
+                                    <span class="btn-text">SEND A MESSAGE</span>
+                                </div>
+                                <div class="btn-icon-wrapper">
+                                    <svg class="btn-arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7 7 17 7 17 17"></polyline>
+                                    </svg>
+                                </div>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Store Location & Interactive Map Section -->
+    <section class="location-section" id="location">
+        <div class="section-header-block">
+            <span class="section-subtitle-script animate-blur">find our pizzeria</span>
+            <h2 class="section-title-red animate-blur">
+                <span style="position: relative; display: inline-block;">
+                    <img src="assets/lines.svg" alt="" class="brand-lines-icon" style="top: -15px; left: -30px;">
+                    STORE LOCATION
+                </span><br>&amp; HOURS
+            </h2>
+        </div>
+        
+        <div class="location-grid">
+            <div class="location-info-card">
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="info-title">OUR ADDRESS</h3>
+                        <p class="info-desc">124 Culinary Way, Flavor District<br>New York, NY 10001</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="info-title">OPENING HOURS</h3>
+                        <p class="info-desc">Mon - Thu: 12:00 PM - 10:30 PM<br>Fri - Sun: 12:00 PM - 11:30 PM</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="info-title">CONTACT & RESERVATION</h3>
+                        <p class="info-desc">Phone: +1 (555) 234-5678<br>Email: reservations@savaro-pizzeria.com</p>
+                    </div>
+                </div>
+
+                <div>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="hero-btn" style="text-decoration:none; display: inline-flex;">
+                        <div class="btn-text-wrapper">
+                            <span class="btn-text">Get Directions</span>
+                        </div>
+                        <div class="btn-icon-wrapper">
+                            <svg class="btn-arrow-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7 7 17 7 17 17"></polyline>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="map-wrapper">
+                <iframe class="map-frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215596489814!2d-73.98784412341857!3d40.7579787348396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Savaro Pizzeria Store Location Map"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section" style="width: 100%; background: #000000; overflow: hidden; display: flex; justify-content: center;">
+        <div style="width: 100%; padding-bottom: 40px; padding-left: 30px; padding-right: 30px; display: flex; justify-content: center; align-items: center;">
+            <div style="width: 100%; max-width: 1280px; padding-top: 120px; position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 80px;">
+                
+                <!-- Animated Logo -->
+                <div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+                    <img src="assets/Logo.svg" alt="Savaro Logo" class="footer-brand-logo">
+                </div>
+
+                <!-- Subscription Form -->
+                <div style="width: 100%; max-width: 726px; display: flex; flex-direction: column; gap: 20px;">
+                    <div style="color: #ffffff; font-size: 15.5px; font-family: var(--font-body); font-weight: 500; text-transform: uppercase; letter-spacing: 1px;">Subscribe our news letter</div>
+                    <div style="position: relative; display: flex; width: 100%; border-bottom: 1px solid var(--color-brand-red); padding-bottom: 16px;">
+                        <input type="email" placeholder="EMAIL" style="flex: 1; background: transparent; border: none; color: #ffffff; font-size: 26px; font-family: var(--font-body); font-weight: 600; outline: none;" onfocus="this.style.color='#FE120F'" onblur="this.style.color='#ffffff'">
+                        <button style="background: transparent; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.1) translateX(5px)'" onmouseout="this.style.transform='scale(1) translateX(0px)'">
+                            <svg width="26" height="24" viewBox="0 0 24 24" fill="none" stroke="#FE120F" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Links Grid -->
+                <div style="width: 100%; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px;">
+                    <div style="display: flex; flex-direction: column; gap: 19px;">
+                        <h6 style="color: #ffffff; font-size: 22px; font-family: var(--font-body); font-weight: 500; text-transform: uppercase;">Contact</h6>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <a href="tel:+880321456987" style="color: #cccccc; font-size: 15px; font-family: var(--font-body); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FE120F'" onmouseout="this.style.color='#cccccc'">+880 321 456 987</a>
+                            <a href="mailto:contact@savaro.com" style="color: #cccccc; font-size: 15px; font-family: var(--font-body); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FE120F'" onmouseout="this.style.color='#cccccc'">contact@savaro.com</a>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <h6 style="color: #ffffff; font-size: 22px; font-family: var(--font-body); font-weight: 500; text-transform: uppercase;">Social Media</h6>
+                        <div style="display: flex; gap: 24px;">
+                            <a href="#" style="color: #cccccc; font-size: 16px; font-family: var(--font-body); text-transform: uppercase; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FE120F'" onmouseout="this.style.color='#cccccc'">Facebook</a>
+                            <a href="#" style="color: #cccccc; font-size: 16px; font-family: var(--font-body); text-transform: uppercase; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FE120F'" onmouseout="this.style.color='#cccccc'">Instagram</a>
+                            <a href="#" style="color: #cccccc; font-size: 16px; font-family: var(--font-body); text-transform: uppercase; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FE120F'" onmouseout="this.style.color='#cccccc'">Pinterest</a>
+                        </div>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 20px;">
+                        <h6 style="color: #ffffff; font-size: 22px; font-family: var(--font-body); font-weight: 500; text-transform: uppercase;">Cms Pages</h6>
+                        <div style="display: flex; gap: 24px;">
+                            <a href="#events" style="color: #cccccc; font-size: 16px; font-family: var(--font-body); text-transform: uppercase; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FE120F'" onmouseout="this.style.color='#cccccc'">Events</a>
+                            <a href="#blogs" style="color: #cccccc; font-size: 16px; font-family: var(--font-body); text-transform: uppercase; text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FE120F'" onmouseout="this.style.color='#cccccc'">Blogs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Copyright -->
+                <div style="width: 100%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px;">
+                    <div style="color: #999999; font-size: 15px; font-family: var(--font-body);">© 2026 Savaro Pizzeria. All rights reserved.</div>
+                    <div style="display: flex; gap: 32px;">
+                        <a href="privacy-policy.html" style="color: #999999; font-size: 15px; font-family: var(--font-body); text-decoration: none; transition: color 0.3s ease;" onmouseover="this.style.color='#FE120F'" onmouseout="this.style.color='#999999'">Privacy Policy</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
     <script>
         const menuToggle = document.getElementById('menuToggle');
@@ -539,7 +952,138 @@
         if (menuClose) menuClose.addEventListener('click', closeMenu);
         menuOverlay.addEventListener('click', closeMenu);
 
-        // Clean & Robust Scroll-Driven Video Zoom (Bottom -> Fullscreen + Delayed Text)
+        // FAQ Accordion Interaction & Icon Morph Animation (+ to -)
+        document.querySelectorAll('.faq-question-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const item = this.closest('.faq-item');
+                const answer = item.querySelector('.faq-answer-wrapper');
+                const faqIcon = item.querySelector('.faq-icon');
+                const vLine = item.querySelector('.v-line');
+                const hLine = item.querySelector('.h-line');
+                const title = item.querySelector('.faq-question-text');
+                
+                const isOpen = item.classList.contains('active');
+                
+                // Close all other items cleanly
+                document.querySelectorAll('.faq-item').forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                        otherItem.querySelector('.faq-answer-wrapper').style.maxHeight = '0px';
+                        const otherIcon = otherItem.querySelector('.faq-icon');
+                        if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+                        const otherV = otherItem.querySelector('.v-line');
+                        if (otherV) {
+                            otherV.style.transform = 'rotate(90deg)';
+                            otherV.style.background = '#1A1717';
+                        }
+                        const otherH = otherItem.querySelector('.h-line');
+                        if (otherH) otherH.style.background = '#1A1717';
+                        const otherTitle = otherItem.querySelector('.faq-question-text');
+                        if (otherTitle) otherTitle.style.color = '#1A1717';
+                    }
+                });
+
+                if (isOpen) {
+                    item.classList.remove('active');
+                    answer.style.maxHeight = '0px';
+                    if (faqIcon) faqIcon.style.transform = 'rotate(0deg)';
+                    if (vLine) {
+                        vLine.style.transform = 'rotate(90deg)';
+                        vLine.style.background = '#1A1717';
+                    }
+                    if (hLine) hLine.style.background = '#1A1717';
+                    if (title) title.style.color = '#1A1717';
+                } else {
+                    item.classList.add('active');
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                    if (faqIcon) faqIcon.style.transform = 'rotate(180deg)';
+                    if (vLine) {
+                        vLine.style.transform = 'rotate(0deg)'; // rotates down into minus
+                        vLine.style.background = '#FE120F';
+                    }
+                    if (hLine) hLine.style.background = '#FE120F';
+                    if (title) title.style.color = '#FE120F';
+                }
+            });
+        });
+
+        // React Bits BlurText Component Implementation (Pure Vanilla JS + Motion / CSS)
+        function createBlurText(element, options = {}) {
+            if (!element) return null;
+            const text = options.text || element.dataset.blurText || element.textContent.trim();
+            element.dataset.blurText = text;
+            const delay = options.delay !== undefined ? options.delay : 150;
+            const animateBy = options.animateBy || 'words';
+            const direction = options.direction || 'top';
+            const stepDuration = options.stepDuration || 0.35;
+            const onComplete = options.onAnimationComplete;
+
+            const segments = animateBy === 'words' ? text.split(/\s+/) : text.split('');
+            element.innerHTML = '';
+            element.style.display = 'inline-flex';
+            element.style.flexWrap = 'wrap';
+            element.style.gap = animateBy === 'words' ? '0.35em' : '0em';
+
+            const spans = segments.map((seg, idx) => {
+                const span = document.createElement('span');
+                span.className = 'blur-text-segment';
+                span.style.display = 'inline-block';
+                span.style.willChange = 'transform, filter, opacity';
+                span.style.opacity = '0';
+                span.style.filter = 'blur(12px)';
+                const startY = direction === 'top' ? '-40px' : '40px';
+                span.style.transform = `translateY(${startY})`;
+                span.style.transition = `opacity ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1), filter ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1), transform ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1)`;
+                span.style.transitionDelay = `${(idx * delay) / 1000}s`;
+                span.textContent = seg;
+                element.appendChild(span);
+                return span;
+            });
+
+            let isPlayed = false;
+            return {
+                play() {
+                    if (isPlayed) return;
+                    isPlayed = true;
+                    spans.forEach(span => {
+                        span.style.opacity = '1';
+                        span.style.filter = 'blur(0px)';
+                        span.style.transform = 'translateY(0px)';
+                    });
+                    if (onComplete) {
+                        const totalDuration = ((segments.length - 1) * delay / 1000) + stepDuration;
+                        setTimeout(onComplete, totalDuration * 1000);
+                    }
+                },
+                reset() {
+                    if (!isPlayed) return;
+                    isPlayed = false;
+                    spans.forEach(span => {
+                        span.style.opacity = '0';
+                        span.style.filter = 'blur(12px)';
+                        const startY = direction === 'top' ? '-40px' : '40px';
+                        span.style.transform = `translateY(${startY})`;
+                    });
+                }
+            };
+        }
+
+        // Initialize BlurText instances for video overlay elements
+        const subtitleBlurText = createBlurText(document.getElementById('videoSubtitle'), {
+            animateBy: 'words',
+            direction: 'top',
+            delay: 140,
+            stepDuration: 0.4
+        });
+
+        const titleBlurText = createBlurText(document.getElementById('videoTitle'), {
+            animateBy: 'words',
+            direction: 'bottom',
+            delay: 120,
+            stepDuration: 0.45
+        });
+
+        // Clean & Robust Scroll-Driven Video Zoom (Bottom -> Fullscreen + Delayed BlurText)
         (function() {
             const section = document.getElementById('showcase');
             const box = document.getElementById('videoExpandBox');
@@ -551,13 +1095,44 @@
                 const windowH = window.innerHeight;
                 const windowW = window.innerWidth;
 
+                if (windowW <= 768) {
+                    // Mobile: Starts expanding AS SOON AS video enters viewport (rect.top <= windowH)
+                    const enterStart = windowH;
+                    const enterEnd = windowH * 0.2; // Fully expands near top of screen
+                    let mobileProgress = (enterStart - rect.top) / (enterStart - enterEnd);
+                    mobileProgress = Math.max(0, Math.min(1, mobileProgress));
+
+                    const startW = Math.min(270, windowW * 0.72);
+                    const fixedH = 230; // Fixed height
+
+                    const currentW = startW + (windowW - startW) * mobileProgress;
+                    const currentH = fixedH;
+
+                    box.style.width = `${currentW}px`;
+                    box.style.height = `${currentH}px`;
+                    box.style.borderRadius = '0px';
+
+                    if (overlay) {
+                        if (mobileProgress >= 0.85) {
+                            overlay.classList.add('visible');
+                            if (subtitleBlurText) subtitleBlurText.play();
+                            if (titleBlurText) titleBlurText.play();
+                        } else {
+                            overlay.classList.remove('visible');
+                            if (subtitleBlurText) subtitleBlurText.reset();
+                            if (titleBlurText) titleBlurText.reset();
+                        }
+                    }
+                    return;
+                }
+
+                // Desktop logic (unaltered 3D zoom sticky scroll)
                 const totalRange = section.offsetHeight - windowH;
                 if (totalRange <= 0) return;
 
                 let progress = (-rect.top) / totalRange;
                 progress = Math.max(0, Math.min(1, progress));
 
-                // Small square 240px x 240px initially
                 const startW = Math.min(240, windowW * 0.3);
                 const startH = Math.min(240, windowH * 0.3);
 
@@ -568,12 +1143,15 @@
                 box.style.height = `${currentH}px`;
                 box.style.borderRadius = '0px';
 
-                // Reveal text overlay ONLY when video reaches full viewport screen (progress >= 0.9)
                 if (overlay) {
-                    if (progress >= 0.9) {
+                    if (progress >= 0.85) {
                         overlay.classList.add('visible');
+                        if (subtitleBlurText) subtitleBlurText.play();
+                        if (titleBlurText) titleBlurText.play();
                     } else {
                         overlay.classList.remove('visible');
+                        if (subtitleBlurText) subtitleBlurText.reset();
+                        if (titleBlurText) titleBlurText.reset();
                     }
                 }
             }
@@ -581,6 +1159,99 @@
             window.addEventListener('scroll', updateZoom, { passive: true });
             window.addEventListener('resize', updateZoom, { passive: true });
             updateZoom();
+        })();
+
+        // Robust Text Animation for all Big Titles & Headings
+        (function() {
+            function applyRobustBlurAnimation(element, options = {}) {
+                if (!element) return;
+                const delay = options.delay !== undefined ? options.delay : 80; 
+                const direction = options.direction || 'top';
+                const stepDuration = options.stepDuration || 0.45;
+                
+                // Identify elements that should animate as single units (skipping their text)
+                const atomSelectors = ['.inline-img-badge', '.menu-title-the-wrapper', '.booking-lines-top-right', '.team-lines-top-left', '.decorative-lines'];
+                
+                const atoms = [];
+                atomSelectors.forEach(selector => {
+                    const els = element.querySelectorAll(selector);
+                    els.forEach(el => {
+                        atoms.push(el);
+                        el.classList.add('dynamic-blur');
+                    });
+                });
+
+                // Walk text nodes, skipping any inside atoms
+                const walker = document.createTreeWalker(element, NodeFilter.SHOW_TEXT, null, false);
+                const textNodes = [];
+                let n;
+                while(n = walker.nextNode()) {
+                    if (n.nodeValue.trim() !== '') {
+                        const isInsideAtom = atoms.some(atom => atom.contains(n));
+                        if (!isInsideAtom) {
+                            textNodes.push(n);
+                        }
+                    }
+                }
+                
+                textNodes.forEach(textNode => {
+                    const words = textNode.nodeValue.split(/(\s+)/);
+                    const fragment = document.createDocumentFragment();
+                    words.forEach(word => {
+                        if (word.trim() === '') {
+                            fragment.appendChild(document.createTextNode(word));
+                        } else {
+                            const span = document.createElement('span');
+                            span.style.display = 'inline-block';
+                            span.className = 'dynamic-blur';
+                            span.textContent = word;
+                            fragment.appendChild(span);
+                        }
+                    });
+                    textNode.parentNode.replaceChild(fragment, textNode);
+                });
+
+                const allSegments = Array.from(element.querySelectorAll('.dynamic-blur, .inline-img-badge'));
+                
+                allSegments.forEach((seg, idx) => {
+                    seg.style.willChange = 'transform, filter, opacity';
+                    seg.style.opacity = '0';
+                    seg.style.filter = 'blur(12px)';
+                    const startY = direction === 'top' ? '-40px' : '40px';
+                    seg.style.transform = `translateY(${startY})`;
+                    seg.style.transition = `opacity ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1), filter ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1), transform ${stepDuration}s cubic-bezier(0.16, 1, 0.3, 1)`;
+                    seg.style.transitionDelay = `${(idx * delay) / 1000}s`;
+                });
+
+                let isPlayed = false;
+                return {
+                    element: element,
+                    play() {
+                        if (isPlayed) return;
+                        isPlayed = true;
+                        allSegments.forEach(seg => {
+                            seg.style.opacity = '1';
+                            seg.style.filter = 'blur(0px)';
+                            seg.style.transform = 'translateY(0px)';
+                        });
+                    }
+                };
+            }
+
+            const animateElements = document.querySelectorAll('.animate-blur');
+            const blurInstances = Array.from(animateElements).map(el => applyRobustBlurAnimation(el, { direction: 'bottom', delay: 100, stepDuration: 0.5 }));
+            
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const instance = blurInstances.find(inst => inst && inst.element === entry.target);
+                        if (instance) instance.play();
+                        obs.unobserve(entry.target); // Play once
+                    }
+                });
+            }, { threshold: 0.15, rootMargin: "0px 0px -10% 0px" });
+
+            animateElements.forEach(el => observer.observe(el));
         })();
     </script>
 </body>

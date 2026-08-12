@@ -1,0 +1,2 @@
+# Custom 404 Error Page Redirection
+ErrorDocument 404 /404.html
